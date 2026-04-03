@@ -1,0 +1,157 @@
+<svg width="1200" height="360" viewBox="0 0 1200 360" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#04050A"/>
+      <stop offset="55%" stop-color="#0B1438"/>
+      <stop offset="100%" stop-color="#04050A"/>
+    </linearGradient>
+
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#6FD4FF"/>
+      <stop offset="50%" stop-color="#4BACDD"/>
+      <stop offset="100%" stop-color="#7A7CFF"/>
+    </linearGradient>
+
+    <linearGradient id="shine" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="0"/>
+      <stop offset="50%" stop-color="#FFFFFF" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
+    </linearGradient>
+
+    <filter id="softGlow" x="-40%" y="-40%" width="180%" height="180%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge>
+        <feMergeNode in="blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <clipPath id="cardClip">
+      <rect x="30" y="30" width="1140" height="300" rx="24"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="360" fill="url(#bg)"/>
+
+  <!-- Main card -->
+  <rect x="30" y="30" width="1140" height="300" rx="24" fill="#0A1026" stroke="#24356E" stroke-width="2"/>
+
+  <!-- Animated shine -->
+  <g clip-path="url(#cardClip)">
+    <rect x="-280" y="0" width="240" height="420" fill="url(#shine)" transform="rotate(18 0 0)">
+      <animate attributeName="x" values="-300;1450" dur="5s" repeatCount="indefinite"/>
+    </rect>
+  </g>
+
+  <!-- Left content -->
+  <text x="80" y="92"
+        font-family="Inter, Arial, sans-serif"
+        font-size="18"
+        fill="#8DBDFF"
+        letter-spacing="2">
+    ELITE REGISTRY
+  </text>
+
+  <text x="80" y="140"
+        font-family="Inter, Arial, sans-serif"
+        font-size="44"
+        font-weight="900"
+        fill="#FFFFFF">
+    Raider of the Month
+  </text>
+
+  <text x="80" y="174"
+        font-family="monospace"
+        font-size="16"
+        fill="#6FD4FF">
+    March 2026
+  </text>
+
+  <line x1="80" y1="194" x2="610" y2="194" stroke="url(#accent)" stroke-width="2" opacity="0.55"/>
+
+  <text x="80" y="252"
+        font-family="Inter, Arial, sans-serif"
+        font-size="52"
+        font-weight="900"
+        fill="url(#accent)">
+    Mysto
+    <animate attributeName="opacity" values="1;0.88;1" dur="2.8s" repeatCount="indefinite"/>
+  </text>
+
+  <text x="82" y="288"
+        font-family="monospace"
+        font-size="18"
+        fill="#D3DEFF">
+    Mobile Security Specialist
+  </text>
+
+  <rect x="80" y="303" width="230" height="30" rx="9" fill="#101938" stroke="#6FD4FF" stroke-opacity="0.20"/>
+  <text x="96" y="323"
+        font-family="monospace"
+        font-size="13"
+        fill="#6FD4FF">
+    VERIFIED ELITE MEMBER
+  </text>
+
+  <!-- Small recognition quote -->
+  <text x="80" y="1200" visibility="hidden">.</text>
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <text x="80" y="0" visibility="hidden">.</text>
+
+  <!-- Right side premium badge -->
+  <g transform="translate(930,180)">
+    <!-- outer glow ring -->
+    <g filter="url(#softGlow)">
+      <g>
+        <animateTransform attributeName="transform" type="rotate" from="0 0 0" to="360 0 0" dur="14s" repeatCount="indefinite"/>
+        <circle r="102" fill="none" stroke="#4BACDD" stroke-width="6" stroke-dasharray="220 40" opacity="0.95"/>
+        <circle cx="0" cy="-102" r="8" fill="#FFFFFF"/>
+        <circle cx="88" cy="50" r="8" fill="#FFFFFF"/>
+        <circle cx="-88" cy="50" r="8" fill="#FFFFFF"/>
+      </g>
+    </g>
+
+    <!-- core circles -->
+    <circle r="78" fill="#1A2250" stroke="#E7ECF2" stroke-width="14"/>
+    <circle r="55" fill="#F1F5FB" stroke="#4BACDD" stroke-width="5"/>
+
+    <!-- center crown/star recognition icon instead of big team logo -->
+    <g>
+      <animateTransform attributeName="transform" type="scale" values="1;1.04;1" dur="2.4s" repeatCount="indefinite"/>
+      <path d="M0,-22 L8,-6 L26,-6 L12,6 L18,24 L0,13 L-18,24 L-12,6 L-26,-6 L-8,-6 Z"
+            fill="url(#accent)"
+            stroke="#2A3367"
+            stroke-width="2"/>
+      <circle cx="0" cy="0" r="6" fill="#FFFFFF"/>
+    </g>
+
+    <!-- subtle inner pulse -->
+    <circle r="60" fill="none" stroke="#6FD4FF" stroke-opacity="0.22" stroke-width="2">
+      <animate attributeName="r" values="56;61;56" dur="2.6s" repeatCount="indefinite"/>
+      <animate attributeName="stroke-opacity" values="0.10;0.28;0.10" dur="2.6s" repeatCount="indefinite"/>
+    </circle>
+  </g>
+
+  <!-- Footer line -->
+  <line x1="80" y1="340" x2="1120" y2="340" stroke="url(#accent)" stroke-width="2" opacity="0.18"/>
+</svg>
